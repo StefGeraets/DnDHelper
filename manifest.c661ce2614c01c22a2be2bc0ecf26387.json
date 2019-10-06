@@ -1,0 +1,41 @@
+{
+  "icons": [
+    {
+      "src": "icon_512x512.cb924fbac2fe31fc0b16dc6f37dbf549.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_384x384.05b777285759c46797dfc23abc693288.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_256x256.2003ee0edba5255aa534bf03b715e387.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_192x192.6af2a332776850f6a6c3f97b8fc1f9c2.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_128x128.6490a3e5da4a0efe340fbee13c1f43b8.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_96x96.58c2801760c74aa113b74f2341b36d95.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "D&D Helper",
+  "short_name": "DnD Helper",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "All the tools for your next adventure",
+  "background_color": "#ffffff"
+}
