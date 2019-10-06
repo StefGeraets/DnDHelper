@@ -15,7 +15,7 @@
 
         #roundCounter {
           margin-left: 4px;
-          text-shadow: 0 0 3px rgba($athens-gray, 0.7);
+          text-shadow: $text-shadow-blur rgba($athens-gray, 0.7);
         }
       }
 
@@ -26,11 +26,11 @@
         font-size: 2rem;
         padding: 4px 8px;
         border-radius: 3px;
-        text-shadow: 0 0 3px rgba($pomegranate, 0.2);
-        transition: all 0.2s ease-in-out;
+        text-shadow: $text-shadow-blur rgba($pomegranate, 0.2);
+        transition: $transition-all-02;
         &:hover {
           background: rgba($pomegranate, 0.1);
-          text-shadow: 0 0 3px rgba($pomegranate, 1);
+          text-shadow: $text-shadow-blur rgba($pomegranate, 1);
           cursor: pointer;
         }
         &:focus {
@@ -57,13 +57,13 @@
           background: transparent;
           border: none;
           font-size: 3.2rem;
-          border-radius: 5px;
+          border-radius: $box-border-radius;
           color: $athens-gray;
-          transition: all 0.2s ease-in-out;
-          text-shadow: 0 0 3px rgba($granny-smith, 0.7);
+          transition: $transition-all-02;
+          text-shadow: $text-shadow-blur rgba($granny-smith, 0.7);
           &:hover {
             background: rgba($granny-smith, 0.2);
-            text-shadow: 0 0 4px rgba($athens-gray, 0.7);
+            text-shadow: $text-shadow-blur rgba($athens-gray, 0.7);
             cursor: pointer;
           }
           &:focus {
@@ -85,7 +85,7 @@
       margin-bottom: 12px;
       padding: 8px 8px 8px 48px;
       box-shadow: 0 0 10px rgba($black, 0.2);
-      transition: all 0.2s ease-in-out;
+      transition: $transition-all-02;
       position: relative;
       overflow: hidden;
       
@@ -173,11 +173,11 @@
         align-items: center;
         .name {
           font-size: 2.4rem;
-          text-shadow: 0 0 3px rgba($athens-gray, 0.6);
+          text-shadow: $text-shadow-blur rgba($athens-gray, 0.6);
         }
         .health {
           color: $pomegranate;
-          text-shadow: 0 0 3px rgba($pomegranate, 0.3);
+          text-shadow: $text-shadow-blur rgba($pomegranate, 0.3);
           font-size: 1.8rem;
           cursor: pointer;
           span {
@@ -189,19 +189,19 @@
       .boxActions {
         height: 0;
         overflow: hidden;
-        transition: all 0.2s ease-in-out;
+        transition: $transition-all-02;
         text-align: right;
         .btnHealth {
           background: none;
           border: 2px solid $pomegranate;
           border-radius: 2px;
           color: $pomegranate;
-          text-shadow: 0 0 3px rgba($pomegranate, 0.3);
+          text-shadow: $text-shadow-blur rgba($pomegranate, 0.3);
           cursor: pointer;
           &.incHealth {
             border-color: $emerald;
             color: $emerald;
-            text-shadow: 0 0 3px rgba($emerald, 0.3);
+            text-shadow: $text-shadow-blur rgba($emerald, 0.3);
           }
           &:focus {
             outline: none;
@@ -218,7 +218,7 @@
           text-align: center;
           margin: 0 6px;
           padding: 4px 0;
-          text-shadow: 0 0 3px rgba($athens-gray, 0.3);
+          text-shadow: $text-shadow-blur rgba($athens-gray, 0.3);
           &:focus {
             outline: none;
           }

@@ -7,7 +7,7 @@
   margin-left: 4px;
   font-size: 1.2rem;
   border: 2px solid $athens-gray;
-  transition: all 0.2s ease-in-out;
+  transition: $transition-all-02;
   &:hover {
     background: rgba($granny-smith, 0.1);
     cursor: pointer;
@@ -52,7 +52,7 @@
       height: 255px;
       padding: 36px 16px 16px;
       box-shadow: 0 0 8px rgba($black, 0.3);
-      transition: all 0.4s ease-in-out;
+      transition: $transition-all-04;
       box-sizing: border-box;
       overflow: hidden;
       position: relative;
@@ -121,7 +121,7 @@
             bottom: 12px;
             left: 40px;
             font-size: 1.4rem;
-            transition: all 0.4s ease-in-out;
+            transition: $transition-all-04;
           }
 
           i {
@@ -141,8 +141,8 @@
             height: 40px;
             padding: 0 20px 0 40px;
             font-size: 1.6rem;
-            transition: all 0.2s ease-in-out;
-            text-shadow: 0 0 3px rgba($viking, 0.3);
+            transition: $transition-all-02;
+            text-shadow: $text-shadow-blur rgba($viking, 0.3);
 
             &:focus {
               outline: none;

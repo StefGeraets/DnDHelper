@@ -12,7 +12,21 @@ $emerald:       #4ed777;
 $old-gold:      #cba73f;
 $pomegranate:   #f44336;
 
+
 //
-// 	Box
+// 	Frequently used
 //------------------------------------
 $box-border-radius: 5px;
+$transition-all-04: all 0.4s ease-in-out;
+$transition-all-02: all 0.2s ease-in-out;
+$text-shadow-blur: 0 0 3px;
+
+//
+// 	Breakpoints for Media Queries
+//------------------------------------
+$breakpoints: (
+  xs: 576px,
+  sm: 758px,
+  md: 992px,
+  lg: 1200px
+);

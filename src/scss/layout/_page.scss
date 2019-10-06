@@ -18,7 +18,20 @@ body {
 }
 
 .initiative {
-  display: flex;
+  display: none;
   justify-content: space-between;
   width: 65vw;
+  @include screen(md) {
+    display: flex;
+  }
+}
+
+.roll-dice {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100vw;
+  @include screen(md) {
+    width: 30vw;
+  }
 }
