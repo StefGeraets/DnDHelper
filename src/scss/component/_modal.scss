@@ -1,0 +1,53 @@
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: overlayFadeIn 0.5s ease forwards;  
+  &.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.modal {
+  width: 70vw;
+  height: 50vh;
+  overflow-y: scroll;
+  background: $outer-space;
+  position: relative;
+  padding: 32px;
+  color: $athens-gray;
+  font-size: 1.6rem;
+  border-radius: 10px;
+  border: 2px solid $granny-smith;
+  box-shadow: 0 0 10px rgba($granny-smith, 0.5);
+}
+
+
+@keyframes overlayFadeIn {
+  0% {
+    opacity: 0;
+    background: rgba(darken($outer-space, 5%), 0);
+    backdrop-filter: blur(0px)
+  }
+  100% {
+    opacity: 100%;
+    background: rgba(darken($outer-space, 5%), 0.5);
+    backdrop-filter: blur(5px)
+  }
+}
+
+@keyframes blur {
+  0% {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+  }
+  100% {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+  }
+}

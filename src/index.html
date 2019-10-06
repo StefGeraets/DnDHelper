@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <noscript>
+      Enable JS to run this app
+    </noscript>
+    
+    <div id="app">
+      <div id="initiative" class="initiative">
+        <div id="initativeList" class="initiativeList">
+          <h2>Initiative</h2>
+          <div class="actions">
+            <span class="round">Round: <span id="roundCounter">1</span></span>
+            <button id="clear" title="Clear all initiative"><i class="fal fa-times-hexagon"></i></button>
+          </div>
+          <div class="list">
+            <div class="prevBox turnBox">
+              <button id="prevTurn" class="turnBtn"><i class="fal fa-chevron-left"></i></button>
+            </div>
+            <div id="characterList" class="order">
+              <!-- characters -->
+            </div>
+            <div class="nextBox turnBox">
+              <button id="nextTurn" class="turnBtn"><i class="fal fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+        <div id="initiativeForm" class="form">
+          <h2>Add to initiative</h2>
+          <div class="actions">
+            <button class="addBtn pc" id="addPC"><i class="fal fa-user"></i> PC</button>
+            <button class="addBtn npc" id="addNPC"><i class="fal fa-user-crown"></i> NPC</button>
+            <button class="addBtn monster" id="addMonster"><i class="fal fa-paw-claws"></i> Monster</button>
+          </div>
+          <div class="addFormBox hidden">
+            <form id="addForm" class="addForm" data-type="monster">
+              <span class="characterIcon" id="characterIcon"><i class="fal fa-user"></i></span>
+              <div class="inputGroup charName">
+                <label for="charName">Name</label>
+                <i class="fal fa-tag"></i>
+                <input type="text" name="Character Name" id="charName">
+              </div>
+              <div class="inputGroup charHealth">
+                <label for="charHealth">Health</label>
+                <i class="fal fa-heart"></i>
+                <input type="number" name="Character Health" id="charHealth">
+              </div>
+              <div class="inputGroup charInitiative">
+                <label for="charInitiative">Initiative</label>
+                <i class="fal fa-dice-d20"></i>
+                <input type="number" name="Character Initiative" id="charInitiative">
+              </div>
+              <button type="submit" class="addBtn"><i class="fal fa-plus"></i> Add</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="roll-dice">
+        <div class="results">
+          <h2>Roll Results</h2>
+          <div id="result">
+            <!-- results -->
+          </div>
+        </div>
+        <div id="dices">
+          <h2>Dice</h2>
+          <div class="dice">
+            <h4>d4</h4>
+            <form id="d4">
+              <input type="number" name="d4" id="d4-amount">
+              <button type="submit" class="btn">
+                <i class="fal fa-dice-d4"></i>
+              </button>
+            </form>
+          </div>
+          <div class="dice">
+            <h4>d6</h4>
+            <form id="d6">
+              <input type="number" name="d6" id="d6-amount">
+              <button type="submit" class="btn">
+                <i class="fal fa-dice-d6"></i>
+              </button>
+            </form>
+          </div>
+          <div class="dice">
+            <h4>d8</h4>
+            <form id="d8">
+              <input type="number" name="d8" id="d8-amount">
+              <button type="submit" class="btn">
+                <i class="fal fa-dice-d8"></i>
+              </button>
+            </form>
+          </div>
+          <div class="dice">
+            <h4>d10</h4>
+            <form id="d10">
+              <input type="number" name="d10" id="d10-amount">
+              <button type="submit" class="btn">
+                <i class="fal fa-dice-d10"></i>
+              </button>
+            </form>
+          </div>
+          <div class="dice">
+            <h4>d12</h4>
+            <form id="d12">
+              <input type="number" name="d12" id="d12-amount">
+              <button type="submit" class="btn">
+                <i class="fal fa-dice-d12"></i>
+              </button>
+            </form>
+          </div>
+          <div class="dice">
+            <h4>d20</h4>
+            <form id="d20">
+              <input type="number" name="d20" id="d20-amount">
+              <button type="submit" class="btn">
+                <i class="fal fa-dice-d20"></i>
+              </button>
+            </form>
+          </div>
+          <div class="dice">
+            <h4>d100</h4>
+            <form id="d100">
+              <input type="number" name="d100" id="d100-amount">
+              <button type="submit" class="btn">
+                <i class="fal fa-dice-d10"></i>
+                <i class="fal fa-dice-d10"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="overlay">
+        <div class="modal">
+          <h1>A D&amp;D Initiative tracker</h1>
+          <h3>I developed this 'app' to make tracking initiative easy</h3>
+          <p>I am a DM and frontend developer. I wanted a project to up my Javascript ES6 skills. And this is the result. Also, some of the players were counting the rolls of a random encounter. They knew by the sound of the dice there was an extra Goblin somewhere.</p>
+          <h3>Initiative tracker</h3>
+          <p>In the middle of the screen you select the kind of character you want to add to the initiative. Fill in the form (even the health of a Player Character) and click add.</p>
+          <p>You characters will appear in the initiative list. You can go to the next of previous turns by clicking on the arrow buttons. Next turn ( <i class="fal fa-chevron-right"></i> ) is on the right side of the list, previous turn ( <i class="fal fa-chevron-left"></i> ) on the left. On the left top you see the round counter. This counter will be reset when you add a character. Clear the list by clicking on the X at the top of the list.</p>
+          <p>You can track the HP of a character by clicking on the heart symbol of the character. Fill in amount and click on <i class="fal fa-minus-square red"></i> to deal damage of click on <i class="fal fa-plus-square green"></i> to heal a character</p>
+          <h3>Dice roller</h3>
+          <p>On the right you can roll dice. Click on the dice icon to roll 1 die. Or put your amount of dice on the line in front of the dice and click the dice icon.</p>
+          <h3>Some heads up</h3>
+          <p class="red">This app is made for modern browsers and for desktop.</p>
+          <h3>Future plans:</h3>
+          <p>Plans to make this even better.</p>
+          <ul class="no-style">
+            <li>Make app mobile friendly</li>
+            <li>Dice accents for critcal hit or crit fail</li>
+            <li>Save your PC's</li>
+            <li>Animations for clearer initiative order</li>
+            <li><a href="github.com" target="_blank" title="Make a suggestion">suggestions?</a></li>
+          </ul>
+          
+          <h3>Cookies:</h3>
+          <p>I don't have any need to store any kind of information, cookies or other stuff. But to be honest: I use a Google font and I am not sure if they can track you on this site.</p>
+          <h3>Resources</h3>
+          <ul>
+            <li>Icons: <a href="https://fontawesome.com/icons/critical-role?style=brands" target="_blank" title="Font Awesome 5">Font Awesome 5</a></li>
+            <li>Font: <a href="https://fonts.google.com/specimen/Rubik" target="_blank" title="Rubik | Google Font">Rubik | Google fonts</a></li>
+            <li>Color palette: <a href="http://colormind.io/bootstrap/" target="_blank" title="Colormind">Colormind</a></li>
+          </ul>
+          <h3>Contact</h3>
+          <p>Did you find any bugs, please report an <a href="github.com" target="_blank" title="Report an issue">issue</a> to make this app even better.</p>
+          <p>Did you find this usefull, buy me a <a href="https://www.paypal.me/stefgeraets/2USD" target="_blank" title="Buy me a cup of coffee">cup of coffee</a></p>
+        </div>
+      </div>
+      <div class="info-button">
+        <i class="fal fa-info"></i>
+      </div>
+    </div>
+  </body>
+</html>

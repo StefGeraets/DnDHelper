@@ -1,0 +1,251 @@
+.initiative {
+  .initiativeList {
+    width: 60%;
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+
+      .round {
+        color: $athens-gray;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+
+        #roundCounter {
+          margin-left: 4px;
+          text-shadow: 0 0 3px rgba($athens-gray, 0.7);
+        }
+      }
+
+      button {
+        background: transparent;
+        border: none;
+        color: $pomegranate;
+        font-size: 2rem;
+        padding: 4px 8px;
+        border-radius: 3px;
+        text-shadow: 0 0 3px rgba($pomegranate, 0.2);
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          background: rgba($pomegranate, 0.1);
+          text-shadow: 0 0 3px rgba($pomegranate, 1);
+          cursor: pointer;
+        }
+        &:focus {
+          outline: none;
+          background: rgba($pomegranate, 0.3);
+        }
+      }
+    }
+
+    .list {
+      display: flex;
+      justify-content: space-between;
+
+      .turnBox {
+        display: flex;
+        justify-content: center;
+        width: 10%;
+        .turnBtn {
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          width: 80%;
+          height: 100%;
+          background: transparent;
+          border: none;
+          font-size: 3.2rem;
+          border-radius: 5px;
+          color: $athens-gray;
+          transition: all 0.2s ease-in-out;
+          text-shadow: 0 0 3px rgba($granny-smith, 0.7);
+          &:hover {
+            background: rgba($granny-smith, 0.2);
+            text-shadow: 0 0 4px rgba($athens-gray, 0.7);
+            cursor: pointer;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .order {
+        width: 80%;
+        padding: 0 10px;
+        position: relative;
+      }
+    }
+
+    .character {
+      background: transparent;
+      color: $athens-gray;
+      margin-bottom: 12px;
+      padding: 8px 8px 8px 48px;
+      box-shadow: 0 0 10px rgba($black, 0.2);
+      transition: all 0.2s ease-in-out;
+      position: relative;
+      overflow: hidden;
+      
+      &.open {
+        .boxActions {
+          height: 36px;
+          padding-top: 8px;
+        }
+      }
+
+      &:before {
+        content: '\f007';
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 300;
+        font-size: 2rem;
+        left:0;
+        top:0;
+        bottom: 0;
+        width: 32px;
+        background: $viking;
+      }
+
+      &.pc {
+        background: rgba($viking, 0.15);
+        &:hover {
+          background: rgba($viking, 0.2);
+          box-shadow: 0 0 10px rgba($viking, 1);
+        }
+      }
+      &.npc {
+        background: rgba($emerald, 0.15);
+        &:before {
+          content: '\f6a4';
+          background: $emerald;
+        }
+        &:hover {
+          background: rgba($emerald, 0.2);
+          box-shadow: 0 0 10px rgba($emerald, 1);
+        }
+      }
+      &.monster {
+        background: rgba($pomegranate, 0.15);
+        &:before {
+          content: '\f702';
+          background: $pomegranate;
+        }
+        &:hover {
+          background: rgba($pomegranate, 0.2);
+          box-shadow: 0 0 10px rgba($pomegranate, 1);
+        }
+      }
+
+      &.death {
+        &:before {
+          content: '\f54c';
+          background: rgba($pomegranate, 0.5);
+          animation: death-pulse 2.5s infinite;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .stats {
+        display: flex;
+        justify-content: space-between;
+        color: rgba($athens-gray, 0.6);
+        margin-bottom: 6px;
+        .rolledInitiative {
+          font-size: 1.4rem;
+          span {
+            margin-left: 2px;
+          }
+        }
+      }
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .name {
+          font-size: 2.4rem;
+          text-shadow: 0 0 3px rgba($athens-gray, 0.6);
+        }
+        .health {
+          color: $pomegranate;
+          text-shadow: 0 0 3px rgba($pomegranate, 0.3);
+          font-size: 1.8rem;
+          cursor: pointer;
+          span {
+            margin-left: 4px;
+          }
+        }
+      }
+
+      .boxActions {
+        height: 0;
+        overflow: hidden;
+        transition: all 0.2s ease-in-out;
+        text-align: right;
+        .btnHealth {
+          background: none;
+          border: 2px solid $pomegranate;
+          border-radius: 2px;
+          color: $pomegranate;
+          text-shadow: 0 0 3px rgba($pomegranate, 0.3);
+          cursor: pointer;
+          &.incHealth {
+            border-color: $emerald;
+            color: $emerald;
+            text-shadow: 0 0 3px rgba($emerald, 0.3);
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+        input {
+          display: inline-block;
+          width: 40px;
+          font-size: 1.6rem;
+          color: $athens-gray;
+          background: none;
+          border: none;
+          border-bottom: 2px solid $athens-gray;
+          text-align: center;
+          margin: 0 6px;
+          padding: 4px 0;
+          text-shadow: 0 0 3px rgba($athens-gray, 0.3);
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes death-pulse {
+    0% {
+        color: $athens-gray;
+    }
+    50% {
+        color: $pomegranate;
+    }
+    100% {
+        color: $athens-gray;
+    }
+}
+@keyframes slide-up-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
