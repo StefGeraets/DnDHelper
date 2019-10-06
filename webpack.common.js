@@ -79,13 +79,20 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       title: 'D&D Helper',
-      template: './src/index.html'
+      template: './src/index.html',
+      favicon: './src/favicon.png'
     }),
     new WebpackPwaManifest({
       name: 'D&D Helper',
-      short_name: 'dndHelper',
-      description: 'All tools for your next adventure',
-      background_color: '#ffffff'
+      short_name: 'DnD Helper',
+      description: 'All the tools for your next adventure',
+      background_color: '#ffffff',
+      icons: [
+        {
+          src: path.resolve('./src/images/icons/icon.png'),
+          sizes: [96, 128, 192, 256, 384, 512] // multiple sizes
+        },
+      ],
     }),
     new WorkboxPlugin.GenerateSW({
       swDest: 'sw.js',
