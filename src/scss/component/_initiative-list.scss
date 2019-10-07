@@ -88,6 +88,8 @@
       transition: $transition-all-02;
       position: relative;
       overflow: hidden;
+      opacity: 0;
+      animation: slide-up-in 0.2s ease-in forwards;
       
       &.open {
         .boxActions {
@@ -223,6 +225,16 @@
             outline: none;
           }
         }
+      }
+    }
+  }
+}
+
+@for $i from 1 through 15 {
+  .initiative {
+    .initiativeList {
+      .character:nth-child(#{$i}) {
+        animation-delay: 100ms * $i;
       }
     }
   }
