@@ -1,20 +1,27 @@
 .roll-dice {
   .results {
     width: 100%;
+    h2 {
+      display: none;
+      @include screen(sm) {
+        display: block;
+      }
+    }
     @include screen(lg) {
       width: 50%;
     }
   }
   #result {
-    box-shadow: 0 0 8px rgba($black, 0.3);
     border-radius: $box-border-radius;
-    padding: 12px;
-    height: 250px;
+    padding: 6px;
+    height: 140px;
     max-height: 500px;
     color: $athens-gray;
     overflow: hidden;
     position: relative;
     @include screen(sm) {
+      box-shadow: 0 0 8px rgba($black, 0.3);
+      padding: 12px;
       height: 370px;
     }
 
@@ -26,7 +33,10 @@
       left: 0;
       right: 0;
       bottom: 0;
-      height: 75px;
+      height: 50px;
+      @include screen(sm) {
+        height: 75px;
+      }
     }
 
     .rollResult {
@@ -63,6 +73,12 @@
     @include screen(lg) {
       width: 40%;
     }
+    h2 {
+      display: none;
+      @include screen(sm) {
+        display: block;
+      }
+    }
     .dices {
       display: flex;
       justify-content: space-between;
@@ -81,18 +97,23 @@
     }
     .dice {
       box-shadow: 0 0 8px rgba($black, 0.3);
-      padding: 10px;
+      padding: 5px 10px;
       transition: $transition-all-02;
-
+      @include screen(sm) {
+        padding: 10px;
+      }
       &:hover {
         box-shadow: 0 0 12px rgba($black, 0.3);
       }
 
       h4 {
-        margin: 4px 0 8px;
+        margin: 4px 0;
         color: $athens-gray;
         font-size: 1.6rem;
         text-align: center;
+        @include screen(sm) {
+          margin: 4px 0 8px;
+        }
       }
       
       form {
