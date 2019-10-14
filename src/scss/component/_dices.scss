@@ -21,12 +21,14 @@
     position: fixed;
     background: $outer-space;
     width: 100%;
+    margin: -8px -8px 0;
 
     @include screen(sm) {
       box-shadow: 0 0 8px rgba($black, 0.3);
       padding: 12px;
       height: 370px;
       position: relative;
+      margin: 0;
     }
 
     &:after {
@@ -57,12 +59,31 @@
           padding: 3px;
           background: $athens-gray;
           color: $outer-space;
+          &.crit {
+            background: $emerald;
+            color: $athens-gray;
+          }
+          &.fail {
+            background: $pomegranate;
+            color: $athens-gray;
+          }
         }
         .rolledResult {
           margin-left: 4px;
           color: $viking;
           font-size: 1.8rem;
           text-shadow: $text-shadow-blur rgba($viking, 0.7);
+          &.crit {
+            color: $emerald;
+            text-shadow: $text-shadow-blur rgba($emerald, 0.7);
+          }
+          &.fail {
+            color: $pomegranate;
+            text-shadow: $text-shadow-blur rgba($pomegranate, 0.7);
+          }
+          &.errorText {
+            font-size: 1.4rem;
+          }
         }
       }
       .rollAll {

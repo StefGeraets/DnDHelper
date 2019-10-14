@@ -12,9 +12,12 @@ body {
 
 #app {
   position: relative;
-  padding: 8px;
+  padding: 8px 8px 64px;
   display: flex;
   justify-content: space-between;
+  @include screen(sm) {
+    padding-bottom: 8px;
+  }
 }
 
 .initiative {

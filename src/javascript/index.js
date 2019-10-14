@@ -43,7 +43,11 @@ function diceListeners() {
     obj.die.addEventListener('submit', function (e) {
       e.preventDefault();
       var roll = diceCtrl.submitDice(obj.value);
-      diceUI.renderDiceroll(roll.diceValue, roll.amount, roll.total, roll.totalArray);
+      if (!roll.tooMuch) {
+        diceUI.renderDiceroll(roll.diceValue, roll.amount, roll.total, roll.totalArray);
+      } else {
+        diceUI.rollTooMuch(roll.diceValue, roll.amount);
+      }
     })
   })
 }
