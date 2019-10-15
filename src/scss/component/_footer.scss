@@ -10,6 +10,7 @@ footer {
     flex: 1;
     font-size: 3rem;
     color: $granny-smith;
+    margin: 0;
     &:focus {
       outline: none;
       box-shadow: none;
@@ -29,6 +30,7 @@ footer {
     padding: 16px 24px;
     cursor: pointer;
     max-width: 58px;
+    margin: 0;
     &:focus {
       outline: none;
       box-shadow: none;

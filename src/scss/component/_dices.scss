@@ -82,6 +82,7 @@
             text-shadow: $text-shadow-blur rgba($pomegranate, 0.7);
           }
           &.errorText {
+            margin-left: 0;
             font-size: 1.4rem;
           }
         }
