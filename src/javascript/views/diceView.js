@@ -25,12 +25,12 @@ export const renderDiceroll = (value, amount, total, totalArray) => {
 
 export const rollTooMuch = (value, amount) => {
   const errorText = [
-    `Hey Daan, ${amount} dice? Realy?`,
-    `Hey Daan, what monster does <span class="rolledDice fail"><i class="fal fa-dice-d${value}"></i> ${amount}d${value}</span> damage?`,
-    `Hey Daan, ${amount} dice is a bit excessive`,
-    `Hey Daan, That must be dice fixing`,
-    `Hey Daan, You really want your PC's to die`,
-    `Hey Daan, How many? WOW`
+    `${amount} dice? Realy?`,
+    `what monster does <span class="rolledDice fail"><i class="fal fa-dice-d${value}"></i> ${amount}d${value}</span> damage?`,
+    `${amount} dice is a bit excessive`,
+    `That must be dice fixing`,
+    `You really want your PC's to die`,
+    `How many? WOW`
   ]
   const randomQuote = Math.floor(Math.random() * errorText.length);
 
