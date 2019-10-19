@@ -13,7 +13,7 @@
     </noscript>
     
     <div id="app">
-      <div id="initiative" class="initiative">
+      <div id="initiative" class="initiative active end">
         <div id="initativeList" class="initiativeList">
           <h2>Initiative</h2>
           <div class="actions">
@@ -27,6 +27,9 @@
             <div id="characterList" class="order">
               <!-- characters -->
             </div>
+            <button class="openForm turnBox">
+              <i class="fal fa-plus"></i>
+            </button>
             <div class="nextBox turnBox">
               <button id="nextTurn" class="turnBtn"><i class="fal fa-chevron-right"></i></button>
             </div>
@@ -63,7 +66,7 @@
         </div>
       </div>
 
-      <div class="roll-dice">
+      <div id="rollDice" class="roll-dice">
         <div class="results">
           <h2>Roll Results</h2>
           <div id="result">
@@ -179,8 +182,8 @@
       </div>
 
       <footer>
-        <button class="footerBtn btnInitiative"><i class="fal fa-users-crown"></i></button>
-        <button class="footerBtn diceBtn active"><i class="fal fa-dice-d20"></i></button>
+        <button class="footerBtn initiativeBtn active"><i class="fal fa-users-crown"></i></button>
+        <button class="footerBtn diceBtn"><i class="fal fa-dice-d20"></i></button>
         <button class="info-button">
           <i class="fal fa-info"></i>
         </button>
