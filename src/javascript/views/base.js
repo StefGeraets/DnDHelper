@@ -19,6 +19,10 @@ export const elements = {
   infoButton: document.querySelector('.info-button'),
   overlay: document.querySelector('.overlay'),
   app: document.getElementById('app'),
+  initiativeBtn: document.querySelector('.initiativeBtn'),
+  initiativeTab: document.getElementById('initiative'),
+  diceBtn: document.querySelector('.diceBtn'),
+  diceTab: document.getElementById('rollDice'),
 }
 
 export const data = {

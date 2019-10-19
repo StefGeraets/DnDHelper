@@ -1,6 +1,24 @@
 .initiative {
+  &.end {
+    .initiativeList {
+      .list {
+        .turnBox {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  h2 {
+    display: none;
+    @include screen(md) {
+      display: block;;
+    }
+  }
   .initiativeList {
-    width: 60%;
+    width: 100%;
+    @include screen(md) {
+      width: 60%;
+    }
 
     .actions {
       display: flex;
@@ -43,24 +61,34 @@
     .list {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
 
       .turnBox {
         display: flex;
         justify-content: center;
-        width: 10%;
+        width: calc(50% - 25px);
+        position: fixed;
+        bottom: 64px;
+        opacity: 0;
+        @include screen(md) {
+          width: 10%;
+        }
         .turnBtn {
           display: flex;
           justify-content: center;
           align-content: center;
           width: 80%;
           height: 100%;
-          background: transparent;
+          background: rgba($granny-smith, 0.2);
           border: none;
           font-size: 3.2rem;
           border-radius: $box-border-radius;
           color: $athens-gray;
           transition: $transition-all-02;
           text-shadow: $text-shadow-blur rgba($granny-smith, 0.7);
+          @include screen(md) {
+            background: transparent;
+          }
           &:hover {
             background: rgba($granny-smith, 0.2);
             text-shadow: $text-shadow-blur rgba($athens-gray, 0.7);
@@ -70,12 +98,49 @@
             outline: none;
           }
         }
+        &.prevBox {
+          order: 2;
+          left: 0;
+          @include screen(md) {
+            order: 1;
+          }
+        }
+        &.nextBox {
+          order: 4;
+          right: 0;
+          @include screen(md) {
+            order: 3;
+          }
+        }
+
+        &.openForm {
+          order: 3;
+          left: calc(50% - 18px);
+          width: 36px;
+          border: 2px solid $emerald;
+          color: $emerald;
+          font-size: 2.8rem;
+          box-sizing: border-box;
+          border-radius: $box-border-radius;
+          background: transparent;
+          &:focus {
+            outline: none;
+          }
+          @include screen(md) {
+            display: none;
+          }
+        }
       }
 
       .order {
-        width: 80%;
+        width: 100%;
         padding: 0 10px;
         position: relative;
+        order: 1;
+        @include screen(md) {
+          width: 80%;
+          order: 2;
+        }
       }
     }
 

@@ -22,6 +22,7 @@ import * as listCtrl from './controller/listController';
 import * as diceUI from './views/diceView';
 import * as charUI from './views/characterView';
 import * as listUI from './views/listView';
+import * as pageUI from './views/pageView';
 
 import { elements, data } from './views/base';
 
@@ -139,6 +140,13 @@ const pageListeners = () => {
       elements.infoButton.firstChild.nextSibling.classList.toggle('fa-info');
       elements.infoButton.firstChild.nextSibling.classList.toggle('fa-times');
     }
+  })
+
+  elements.initiativeBtn.addEventListener('click', (e) => {
+    pageUI.showInitiativeTab('initiative');
+  });
+  elements.diceBtn.addEventListener('click', (e) => {
+    pageUI.showDiceTab('dice');
   })
 }
 

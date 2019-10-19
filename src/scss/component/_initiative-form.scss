@@ -19,7 +19,12 @@
 
 .initiative {
   .form {
-    width: 40%;
+    display: none;
+    width: 100%;
+    @include screen(md) {
+      display: block;
+      width: 40%;
+    }
 
     .actions {
       display: flex;

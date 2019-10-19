@@ -23,18 +23,66 @@ body {
 .initiative {
   display: none;
   justify-content: space-between;
-  width: 65vw;
-  @include screen(md) {
+  flex-wrap: wrap;
+  width: 100vw;
+  animation: animate-in 0.3s ease-in-out forwards;
+  &.out {
+    animation: animate-out 0.3s ease-in-out forwards;
+  }
+  &.active {
     display: flex;
+  }
+  &.end {
+    animation: none;
+  }
+  @include screen(md) {
+    animation: none;
+    display: flex;
+    width: 65vw;
+    flex-wrap: nowrap;
   }
 }
 
 .roll-dice {
-  display: flex;
+  display: none;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100vw;
+  animation: animate-in 0.3s ease-in-out forwards;
+  &.out {
+    animation: animate-out 0.3s ease-in-out forwards;
+  }
+  &.active {
+    display: flex;
+  }
+  &.end {
+    animation: none;
+  }
   @include screen(md) {
+    animation: none;
+    display: flex;
     width: 30vw;
+  }
+}
+
+@keyframes animate-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+@keyframes animate-out {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(200px);
   }
 }
