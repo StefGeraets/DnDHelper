@@ -163,10 +163,8 @@ const pageListeners = () => {
 
   function checkScreenwidth(x) {
     if (x.matches) { // small screen
-      console.log('screen small?');
       elements.characterForm.classList.add('hidden');
     } else { // Big screen
-      console.log('screen big?');
       elements.initiativeTab.classList.remove('hide');
       elements.characterForm.classList.remove('hidden');
     }
