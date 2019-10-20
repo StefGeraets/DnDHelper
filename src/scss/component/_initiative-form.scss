@@ -19,8 +19,11 @@
 
 .initiative {
   .form {
-    display: none;
+    display: block;
     width: 100%;
+    &.hidden {
+      display: none;
+    }
     @include screen(md) {
       display: block;
       width: 40%;
@@ -54,13 +57,16 @@
     .addFormBox {
       width: 90%;
       margin: 0 auto;
-      height: 255px;
+      height: 340px;
       padding: 36px 16px 16px;
       box-shadow: 0 0 8px rgba($black, 0.3);
       transition: $transition-all-04;
       box-sizing: border-box;
       overflow: hidden;
       position: relative;
+      @include screen(md) {
+        height: 255px;
+      }
       &.hidden {
         height: 0;
         padding: 0 16px;
@@ -160,12 +166,18 @@
           }
           &.charHealth {
             display: inline-block;
-            width: 48%;
-            margin-right: 3%;
+            width: 100%;
+            @include screen(md) {
+              width: 48%;
+              margin-right: 3%;
+            }
           }
           &.charInitiative {
             display: inline-block;
-            width: 48%;
+            width: 100%;
+            @include screen(md) {
+              width: 48%;
+            }
           }
         }
         .addBtn {

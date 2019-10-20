@@ -8,6 +8,19 @@
       }
     }
   }
+
+  &.hide {
+    .initiativeList {
+      .actions {
+        display: none;
+      }
+      .list {
+        .order {
+          display: none;
+        }
+      }
+    }
+  }
   h2 {
     display: none;
     @include screen(md) {
@@ -72,6 +85,9 @@
         opacity: 0;
         @include screen(md) {
           width: 10%;
+          position: relative;
+          bottom: initial;
+          opacity: 1;
         }
         .turnBtn {
           display: flex;
@@ -123,8 +139,21 @@
           box-sizing: border-box;
           border-radius: $box-border-radius;
           background: transparent;
+          transition: all 0.2s ease-in-out;
+          i {
+            color: $emerald;
+            transition: all 0.2s ease-in-out;
+          }
           &:focus {
             outline: none;
+          }
+          &.open {
+            color: $pomegranate;
+            border-color: $pomegranate;
+            i {
+              color: $pomegranate;
+              transform: rotate(135deg);
+            }
           }
           @include screen(md) {
             display: none;

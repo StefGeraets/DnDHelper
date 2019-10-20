@@ -1,4 +1,4 @@
-import { data } from './base';
+import { data, elements } from './base';
 import * as charCtrl from '../controller/characterController';
 
 export const resetForm = (nameInput, healthInput, initiativeInput) => {
@@ -63,4 +63,24 @@ export const changeHealth = (charID, incDec) => {
   document.querySelector(`#${charID} input`).value = '';
   document.querySelector(`#${charID} .healthPoints`).textContent = thisCharacter.health;
   closeHealth(charID);
+}
+
+export const showForm = () => {
+  console.log('show form');
+  // hide list
+  elements.initiativeTab.classList.remove('hide');
+  elements.initiativeTab.classList.add('hide');
+
+  // show form
+  elements.characterForm.classList.remove('hidden');
+}
+
+export const hideForm = () => {
+  console.log('hide form');
+  // hide form
+  elements.characterForm.classList.remove('hidden');
+  elements.characterForm.classList.add('hidden');
+
+  // show list
+  elements.initiativeTab.classList.remove('hide');
 }

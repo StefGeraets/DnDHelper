@@ -14,8 +14,9 @@
 }
 
 .modal {
-  width: 70vw;
-  height: 50vh;
+  width: 90vw;
+  height: 80vh;
+  margin-bottom: 64px;
   overflow-y: scroll;
   background: $outer-space;
   position: relative;
@@ -25,6 +26,11 @@
   border-radius: 10px;
   border: 2px solid $granny-smith;
   box-shadow: 0 0 10px rgba($granny-smith, 0.5);
+  @include screen(md) {
+    width: 70vw;
+    height: 50vh;
+    margin-bottom: 0;
+  }
 }
 
 

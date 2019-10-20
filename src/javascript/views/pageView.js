@@ -14,7 +14,6 @@ const showTab = (tabToShow, tabToRemove) => {
       elements[tabToShow].classList.add('end');
     }
   })
-
 }
 
 export const showDiceTab = () => {

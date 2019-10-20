@@ -148,6 +148,35 @@ const pageListeners = () => {
   elements.diceBtn.addEventListener('click', (e) => {
     pageUI.showDiceTab('dice');
   })
+
+  elements.openFormBtn.addEventListener('click', (e) => {
+    if(elements.openFormBtn.classList.contains('open')) {
+      charUI.hideForm();
+      elements.openFormBtn.classList.remove('open');
+    } else {
+      charUI.showForm();
+      elements.openFormBtn.classList.add('open');
+    }
+  })
+
+  var width = window.matchMedia("(max-width: 992px)")
+
+  function checkScreenwidth(x) {
+    if (x.matches) { // small screen
+      console.log('screen small?');
+      elements.characterForm.classList.add('hidden');
+    } else { // Big screen
+      console.log('screen big?');
+      elements.initiativeTab.classList.remove('hide');
+      elements.characterForm.classList.remove('hidden');
+    }
+  }
+
+
+  if (!elements.body.classList.contains('checkout-index-index')) {
+    checkScreenwidth(width);
+    width.addListener(checkScreenwidth)
+  }
 }
 
 

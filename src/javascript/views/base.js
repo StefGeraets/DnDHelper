@@ -23,6 +23,9 @@ export const elements = {
   initiativeTab: document.getElementById('initiative'),
   diceBtn: document.querySelector('.diceBtn'),
   diceTab: document.getElementById('rollDice'),
+  openFormBtn: document.querySelector('.openForm'),
+  characterForm: document.querySelector('.form'),
+  body: document.querySelector('body'),
 }
 
 export const data = {
